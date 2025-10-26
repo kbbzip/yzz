@@ -1,0 +1,85 @@
+/* 华为Mate X5适配样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'HarmonyOS Sans', -apple-system, sans-serif;
+    background: #f5f5f5;
+}
+
+.navbar {
+    display: flex;
+    background: white;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-brand {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.nav-buttons button, .nav-buttons select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+    white-space: nowrap;
+}
+
+/* 语音输入动画 */
+.voice-button {
+    position: relative;
+    padding: 15px 25px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    margin: 20px;
+    font-size: 16px;
+}
+
+.pulse-circle {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(2.5); opacity: 0; }
+}
+
+.content {
+    margin-top: 80px;
+    padding: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 5px;
+    }
+    
+    .nav-buttons {
+        flex-wrap: wrap;
+    }
+}

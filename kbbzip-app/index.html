@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作日程笔记</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- PWA配置 -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3B82F6">
+</head>
+<body>
+    <div id="app">
+        <!-- 导航栏 -->
+        <nav class="navbar">
+            <div class="nav-brand">日程笔记</div>
+            <div class="nav-buttons">
+                <button onclick="showView('month')">月笔记</button>
+                <button onclick="showView('week')" class="active">周笔记</button>
+                <button onclick="showView('day')">日笔记</button>
+                <button onclick="showView('month-summary')">月汇总</button>
+                <button onclick="showView('year-summary')">年汇总</button>
+                <select onchange="selectObject(this.value)">
+                    <option>对象选择</option>
+                    <option>总助</option>
+                    <option>人事</option>
+                    <option>财务</option>
+                </select>
+                <button onclick="showView('admin')">系统管理</button>
+            </div>
+        </nav>
+
+        <!-- 语音输入按钮 -->
+        <div class="voice-section">
+            <button id="voiceBtn" class="voice-button">
+                <div class="pulse-circle"></div>
+                🎤 语音输入
+            </button>
+            <div id="voiceResult" class="voice-result"></div>
+        </div>
+
+        <!-- 内容区域 -->
+        <main id="content" class="content">
+            <!-- 默认显示周笔记视图 -->
+            <div id="week-view" class="view active">
+                <h3>周笔记视图</h3>
+                <button onclick="showAddNote()">添加记事</button>
+            </div>
+            <!-- 其他视图... -->
+        </main>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="xfyun-voice.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

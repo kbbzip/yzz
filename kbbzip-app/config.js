@@ -1,0 +1,3 @@
+export const SUPABASE_URL = https://btfvmnarsjibtcmzolya.supabase.co; // 替换为您的实际URL
+export const SUPABASE_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ0ZnZtbmFyc2ppYnRjbXpvbHlhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjEyODYxOTAsImV4cCI6MjA3Njg2MjE5MH0.fsYK2FDwhI1hgIe_1bjWTNgk0jDHbhiXGFCSxgvVWB8; // 替换为您的实际key
+export const XFYUN_APPID = ec4b98c5;
